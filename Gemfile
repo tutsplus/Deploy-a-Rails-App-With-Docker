@@ -52,3 +52,7 @@ gem 'puma'
 group :test do
   gem 'minitest-rails'
 end
+
+group :production do
+  gem "pg"
+end
