@@ -1,11 +1,7 @@
-%p#notice= notice
+%h1= @article.title
 
-%p
-  %b Title:
-  = @article.title
-%p
-  %b Body:
-  = @article.body
+= simple_format @article.body
+
 %p
   %b Tags:
   = @article.tags
@@ -13,3 +9,33 @@
 = link_to 'Edit', edit_article_path(@article)
 \|
 = link_to 'Back', articles_path
+
+%h2 Comments
+
+%ol
+  -@article.comments.each do |comment|
+    %li
+      %p
+        %strong=comment.name
+        (#{comment.email})
+      %p
+        =comment.body
+
+%h2 Post a comment
+
+=form_for [ @article, Comment.new ] do |f|
+  %p
+    =f.label :name
+    =f.text_field :name, class: "form-control"
+
+  %p
+    =f.label :email
+    =f.text_field :email, class: "form-control"
+
+  %p
+    =f.label :body
+    =f.text_area :body, class: "form-control"
+
+  %p
+    =f.submit class: "btn btn-primary"
+
