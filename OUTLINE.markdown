@@ -6,7 +6,7 @@
 
 ## Source Files Location:
 
-https://github.com/josemota/dockerapp
+https://github.com/josemota/tutsplus-dockerapp
 
 ## Topic: Code
 
