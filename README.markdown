@@ -9,7 +9,7 @@ Source files contain the completed Rails application, organised into industry-st
 
 These are source files for the Tuts+ course: [Deploy a Rails App with Docker][published url]
 
-Available on [Tuts+](https://tutsplus.com) March, 2015
+Available on [Tuts+](https://tutsplus.com)
 
 [published url]: https://code.tutsplus.com/courses/deploy-a-rails-application-with-docker
 [instructor url]: https://tutsplus.com/authors/jose-mota
